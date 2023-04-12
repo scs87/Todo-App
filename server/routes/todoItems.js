@@ -8,11 +8,14 @@ const TodoItemModel = require('../models/todoItems');
 
 //CREAMOS LA PRIMERA RUTA -- AÑADIREMOS WISH ITEMS A LA DATABASE
 
-router.post('/api/item', (req, res)=> {
+router.post('/api/item', async(req, res)=> {
     try{
         const newItem = new TodoItemModel({
-
+            item: req.body.item
         })
+        //GUARDAMOS EL OBJETO EN LA DATABASE
+        const saveItem = await newItem.save()
+        res.status(200).json('Item added Successfully.');
 
         }catch(err){
             res.json(err);
@@ -20,6 +23,13 @@ router.post('/api/item', (req, res)=> {
 
 
     })
+
+
+    //EXPORT ROUTER
+
+    module.exports = router;
+
+
 
 
 

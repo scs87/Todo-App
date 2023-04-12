@@ -10,13 +10,19 @@ app.use(express.json());
 
 const PORT = process.env.PORT || 5500;
 
+//Importamos rutas
+const TodoItemRoute = require('./routes/todoItems');
+
+
+
+
 //Vamos a conectar a MooongoDB...
 
 moongose.connect(process.env.DB_CONNECT)
 .then(()=> console.log("Data Connected"))
 .catch(err => console.log(err))
 
-
+app.use('/', TodoItemRoute );
 
 
 //añadir puerto y conectar al servidor
