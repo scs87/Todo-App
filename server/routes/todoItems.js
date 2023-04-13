@@ -28,15 +28,43 @@ router.post('/api/item', async (req, res) => {
 
 router.get('/api/items', async (req, res) => {
 
-    try{
+    try {
         const allTodoItems = await TodoItemModel.find({});
-        resizeTo.status(200).json(allTodoItems)
-        }catch (err) {
+
+        res.status(200).json(allTodoItems)
+    } catch (err) {
+        res.json(err);
+
+    }
+
+})
+
+//UPDATEAMOS ITEM
+router.put('/api/item/:id', async (req, res) => {
+
+    try {
+        const updateItem = await TodoItemModel.findByIdAndUpdate(req.params.id, { $set: req.body })
+        res.status(200).json('Item Updated');
+    } catch (err) {
         res.json(err);
 
     }
 
 
+
+})
+
+
+// BORRAMOS ITEM DE LA DATABASE,
+
+router.delete('/api/item/:id', async (req, res) => {
+
+    try {
+        //encontramos el item por id y lo borramos
+        const deleteItem = await todoItemsModel.findByIdAndDelete
+    } catch (err) {
+        res.json(err);
+    }
 })
 
 

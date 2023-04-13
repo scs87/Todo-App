@@ -3,5 +3,24 @@ Content-Type: application/json
 
 
  {
-    "item": "This is the second todo item"
+    "item": "This is the first todo item"
+ }
+
+
+### 
+
+
+
+GET http://localhost:5500/api/items
+Content-Type: application/json
+
+
+### 
+
+PUT  http://localhost:5500/api/item/64380fa2cd970c24649b85bc
+Content-Type: application/json
+
+
+ {
+    "item": "This is the first todo item updated"
  }
