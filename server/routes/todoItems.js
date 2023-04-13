@@ -61,7 +61,8 @@ router.delete('/api/item/:id', async (req, res) => {
 
     try {
         //encontramos el item por id y lo borramos
-        const deleteItem = await todoItemsModel.findByIdAndDelete
+        const deleteItem = await TodoItemModel.findByIdAndDelete(req.params.id);
+        res.status(200).json('Item Deleted');
     } catch (err) {
         res.json(err);
     }
