@@ -1,6 +1,7 @@
 const express = require('express');
 const moongose = require('mongoose');
 const dotenv = require('dotenv').config();
+const cors = require('cors');
 
 const app = express();
 //use express.json() para obtener data en formato json
@@ -9,6 +10,8 @@ app.use(express.json());
 //Puerto
 
 const PORT = process.env.PORT || 5500;
+
+app.use(cors());
 
 //Importamos rutas
 const TodoItemRoute = require('./routes/todoItems');
