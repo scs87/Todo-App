@@ -4,8 +4,8 @@ function App() {
   return (
     <div className="App">
       <h1>Wish List</h1>
-      <form>
-        <input type="text" placeholder='Add Todo Item'></input>
+      <form className="form">
+        <input type="text" placeholder='Search here'></input>
         <button type="submit">Añadir</button>
       </form>
       <div className="todo-listItems"></div>
