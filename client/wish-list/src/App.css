@@ -1,3 +1,4 @@
+
 .App {
   display: flex;
   flex-direction: column;
@@ -50,7 +51,7 @@
 
 .form button[type="submit"] {
 
-  background-color: #474a4a;
+  background-color: #4e4077;
   color: #fff;
   border: none;
   border-radius: 6px;
@@ -89,12 +90,12 @@
   outline: none;
 }
 .update-item{
-  background-color: #706f6e;
+  background-color: #71b46f;
   color: #fff;
 }
 
 .delete-item{
-  background-color: rgb(175, 193, 148);
+  background-color: rgb(213, 140, 128);
   color: #fff;
 }
 
