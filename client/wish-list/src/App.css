@@ -50,7 +50,7 @@
 
 .form button[type="submit"] {
 
-  background-color: #008080;
+  background-color: #474a4a;
   color: #fff;
   border: none;
   border-radius: 6px;
@@ -89,12 +89,12 @@
   outline: none;
 }
 .update-item{
-  background-color: #eb5a17;
+  background-color: #706f6e;
   color: #fff;
 }
 
 .delete-item{
-  background-color: greenyellow;
+  background-color: rgb(175, 193, 148);
   color: #fff;
 }
 
