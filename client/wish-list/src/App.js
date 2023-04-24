@@ -87,7 +87,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Wish List</h1>
+      <h1>✨✨Wish List✨✨</h1>
       <form className="form" onSubmit={e => addItem(e)}>
         <input type="text" placeholder='Search here' onChange={e => { setItemText(e.target.value) }} value={itemText}></input>
         <button type="submit">Añadir</button>

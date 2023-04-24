@@ -3,7 +3,7 @@ import React from 'react';
 function Navbar() {
   return (
     <div className="navbar">
-      <div className="navbar__logo">My Website</div>
+      <div className="navbar__logo">My Wishlist site</div>
       <div className="navbar__search">
         <input type="text" placeholder="Search..." />
         <button>Search</button>
