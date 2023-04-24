@@ -45,6 +45,7 @@ function App() {
       const res = await axios.delete(`http://localhost:5500/api/item/${id}`)
       const newListItems = listItems.filter(item => item._id !== id);
       setListItems(newListItems);
+      console.log(res);
 
     } catch (err) {
       console.log(err);
@@ -60,7 +61,8 @@ function App() {
       const res = await axios.put(`http://localhost:5500/api/item/${isUpdating}`, {item: updateItemText})
       console.log(res.data);
       const updateItemIndex = listItems.findIndex(item => item._id === isUpdating)
-      const updateItem = listItems[updateItemIndex].item = updateItemText
+      const updatedItem = listItems[updateItemIndex].item = updateItemText
+      console.log(updatedItem)
       setUpdateItemText('');
       setIsUpdating('');
 
